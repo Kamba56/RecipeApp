@@ -1,6 +1,11 @@
 class RecipesController < ApplicationController
   def index
-    @recipes = current_user.recipes
+    unless current_user
+      redirect_to public_recipe_path
+      return
+    else
+      @recipes = current_user.recipes
+    end
   end
 
   def public_recipe
