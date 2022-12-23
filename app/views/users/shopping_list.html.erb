@@ -1,1 +1,23 @@
 <h1>Shopping list</h1>
+
+<p>Amount of items needed: </p>
+<p>Total price: </p>
+
+<table class="table">
+  <thead>
+    <tr>
+        <th scope="col">Food</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Unit Price </th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @foods.each do |food| %>
+          <tr>
+          <td><%= food.name %></td>
+          <td><%= food.measurement_unit %></td>
+          <td><%= food.price %></td>
+          </tr>
+      <% end %>
+  </tbody>
+</table>

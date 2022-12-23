@@ -4,12 +4,14 @@
 
 <div id="recipes">
   <% @recipes.each do |recipe| %>
-    <div class="card w-75">
-      <div class="card-body">
-        <h5 class="card-title"><%= recipe.name %></h5>
-        <p class="card-text"><%= recipe.description %></p>
-        <a href="#" class="btn btn-primary">Remove</a>
+    <a href="<%= recipe_path(recipe) %>">
+      <div class="card w-75">
+        <div class="card-body">
+          <h5 class="card-title"><%= recipe.name %></h5>
+          <p class="card-text"><%= recipe.description %></p>
+          <a href="#" class="btn btn-danger">Remove</a>
+        </div>
       </div>
-    </div>
+    </a>
   <% end %>
 </div>
