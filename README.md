@@ -25,7 +25,7 @@
 <!-- PROJECT DESCRIPTION -->
 https://www.youtube.com/watch?v=Rea2AjMgZXA
 
-# 📖 Cruize Blog <a name="about-project"></a>
+# 📖 Recipe App <a name="about-project"></a>
 
 > A clone of buffer
 
@@ -52,7 +52,7 @@ https://www.youtube.com/watch?v=Rea2AjMgZXA
 <details>
 <summary>Database</summary>
   <ul>
-    <li><a href="https://www.postgresql.org/">SQLite</a></li>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
 </details>
 
@@ -62,9 +62,9 @@ https://www.youtube.com/watch?v=Rea2AjMgZXA
 
 > Describe between 1-3 key features of the application.
 
-- **Users can add posts**
-- **Users can comment on posts**
-- **Users can like posts**
+- **Users can add food**
+- **Users can view recipes**
+- **Users can generate shopping list**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -77,7 +77,6 @@ https://www.youtube.com/watch?v=Rea2AjMgZXA
 
 - [ ] **[Users can register ]**
 - [ ] **[Users can Login ]**
-- [ ] **[Users can like and commnet on other users posts]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -118,7 +117,7 @@ Example command:
 Clone this repository to your desired folder:
 
 ```
-  git clone https://github.com/t-bello7/micro-blog.git
+  git clone https://github.com/Kamba56/RecipeApp.git
 ```
 
 ### Install
@@ -126,7 +125,7 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```
-  cd micro-blog
+  cd RecipeApp
   gem install
 ```
 
