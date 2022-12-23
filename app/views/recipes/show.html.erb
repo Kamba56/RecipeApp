@@ -3,8 +3,8 @@
     <h5 class="card-title"><%= @recipe.name %></h5>
     <p class="card-text">Cooking Time: <%= @recipe.cooking_time %></p>
     <p class="card-text">preparation Time: <%= @recipe.preparation_time %></p>
-    <a href="#" class="card-link">Generate shopping list</a>
-    <a href="#" class="card-link">Add ingredient</a>
+    <a href="#" class="btn btn-primary">Generate shopping list</a>
+    <a href="#" class="btn btn-green">Add ingredient</a>
   </div>
 </div>
 
@@ -18,11 +18,11 @@
     </tr>
   </thead>
   <tbody>
-      <% @foods.each do |food| %>
+      <% @foods.each do |x| %>
           <tr>
-          <td><%= food.name %></td>
-          <td><%= food.measurement_unit %></td>
-          <td><%= food.price %></td>
+          <td><%= x.food.name %></td>
+          <td><%= "#{x.quantity} #{x.food.measurement_unit}" %></td>
+          <td><%= x.food.price %></td>
           <td><%= button_to "Delete", method: :delete, class: "btn btn-danger" %> </td>
           </tr>
       <% end %>

@@ -12,21 +12,10 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
-    @foods = find_foods(@recipe)
+    @foods = @recipe.recipe_foods.includes(:food)
   end
 
   def public_recipe
     @recipes = Recipe.where(public: true).order(created_at: :desc)
-  end
-
-  private
-
-  def find_foods(recipe)
-    foods = []
-    recipe.recipe_foods.each do |x|
-      foods << Food.find(x.food_id)
-    end
-
-    return foods
   end
 end
