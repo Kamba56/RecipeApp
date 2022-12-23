@@ -4,14 +4,15 @@
 
 <div id="recipes">
   <% @recipes.each do |recipe| %>
-    <a href="<%= recipe_path(recipe) %>">
-      <div class="card w-75">
+    <div class="card w-75">
+      <a href="<%= recipe_path(recipe) %>">
         <div class="card-body">
           <h5 class="card-title"><%= recipe.name %></h5>
           <p class="card-text"><%= recipe.description %></p>
-          <a href="#" class="btn btn-danger">Remove</a>
         </div>
-      </div>
-    </a>
+      </a>
+      <%= button_to "Delete", recipe_path(recipe), method: :delete, class: "btn btn-danger" %>
+    </div>
+    <br>
   <% end %>
 </div>
