@@ -1,11 +1,11 @@
 class RecipesController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show, :public_recipe]
+  before_action :authenticate_user!, except: %i[index show public_recipe]
 
   def index
-    unless current_user
-      redirect_to public_recipe_path
-    else
+    if current_user
       @recipes = current_user.recipes
+    else
+      redirect_to public_recipe_path
     end
   end
 
