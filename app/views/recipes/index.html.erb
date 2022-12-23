@@ -3,5 +3,13 @@
 <h1>Recipes</h1>
 
 <div id="recipes">
-  <%= @user %>
+  <% @recipes.each do |recipe| %>
+    <div class="card w-75">
+      <div class="card-body">
+        <h5 class="card-title"><%= recipe.name %></h5>
+        <p class="card-text"><%= recipe.description %></p>
+        <a href="#" class="btn btn-primary">Remove</a>
+      </div>
+    </div>
+  <% end %>
 </div>
