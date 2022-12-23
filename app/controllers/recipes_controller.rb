@@ -11,7 +11,7 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
-    @foods = @recipe.recipe_foods.includes(:food)
+    @recipe_foods = @recipe.recipe_foods.includes(:food)
   end
 
   def public_recipe

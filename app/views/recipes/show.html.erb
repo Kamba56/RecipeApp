@@ -18,12 +18,12 @@
     </tr>
   </thead>
   <tbody>
-      <% @foods.each do |x| %>
+      <% @recipe_foods.each do |recipe_food| %>
           <tr>
-          <td><%= x.food.name %></td>
-          <td><%= "#{x.quantity} #{x.food.measurement_unit}" %></td>
-          <td><%= x.food.price %></td>
-          <td><%= button_to "Delete", method: :delete, class: "btn btn-danger" %> </td>
+          <td><%= recipe_food.food.name %></td>
+          <td><%= "#{recipe_food.quantity} #{recipe_food.food.measurement_unit}" %></td>
+          <td><%= recipe_food.food.price %></td>
+          <td><%= button_to "Delete", recipe_food_path(recipe_food), method: :delete, class: "btn btn-danger" %> </td>
           </tr>
       <% end %>
   </tbody>

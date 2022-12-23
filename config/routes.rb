@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
-  get 'recipe_foods/destroy'
-  get 'recipe_foods/new'
-  get 'recipe_foods/create'
-  get 'recipe_food/destroy'
   resources :recipes, only: [:index, :show, :destroy]
   devise_for :users
   resources :food, only: %i[index show new create destroy]
+  resources :recipe_foods, only: %i[new create destroy]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   get 'public_recipe', to: 'recipes#public_recipe', as: :public_recipe
   get 'shopping_list', to: 'users#shopping_list', as: :shopping_list
